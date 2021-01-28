@@ -15,5 +15,8 @@ export const config: Config = {
     chromeOptions: {
       args: ['--headless', '--disable-gpu']
     }
+  },
+  jasmineNodeOpts: {
+    defaultTimeoutInterval: 120000
   }
 };
