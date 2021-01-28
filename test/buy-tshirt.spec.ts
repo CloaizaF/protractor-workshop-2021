@@ -27,31 +27,25 @@ describe('Buy a t-shirt', () => {
     await browser.get('http://automationpractice.com/');
 
     await menuContentPage.goToTShirtMenu();
-    await(browser.sleep(3000));
-    await productListPage.goToProductList();
-    await(browser.sleep(6000));
-    await productAddedModalPage.goToProductAddedModal();
-    await(browser.sleep(1000));
-    await summaryStepPage.goToSummaryStep();
     await(browser.sleep(5000));
+    await productListPage.goToProductList();
+    await(browser.sleep(3000));
+    await productAddedModalPage.goToProductAddedModal();
+    await summaryStepPage.goToSummaryStep();
 
     await $('#email').sendKeys('aperdomobo@gmail.com');
     await $('#passwd').sendKeys('WorkshopProtractor');
     await signInStepPage.goToSignIn();
-    await(browser.sleep(3000));
 
     await addressStepPage.goToAddressStep();
-    await(browser.sleep(3000));
 
     await shippingStepPage.goToShippingStep();
-    await(browser.sleep(3000));
 
     await paymentStepPage.goToPaymentStep();
-    await(browser.sleep(3000));
+
     await bankPaymentPage.goToBankPayment();
-    await(browser.sleep(3000));
+
     await orderSummaryPage.goToOrderSummary();
-    await(browser.sleep(3000));
 
     await expect($('#center_column > div > p > strong').getText())
       .toBe('Your order on My Store is complete.');
