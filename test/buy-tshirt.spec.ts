@@ -27,7 +27,7 @@ describe('Buy a t-shirt', () => {
 
   it('then the t-shirt should be bought', async () => {
     await menuContentPage.goToTShirtMenu();
-    await (browser.sleep(5000));
+    await (browser.sleep(6000));
     await productListPage.goToProductList();
     await (browser.sleep(3000));
     await productAddedModalPage.goToProductAddedModal();
